@@ -248,6 +248,7 @@ function load(map)
 	};
 
 	var data = JSON.stringify({"id":map});
+	console.log("sending data:"+ data);
 	xhr.send(data);
 
 }

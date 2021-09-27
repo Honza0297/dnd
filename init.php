@@ -1,5 +1,5 @@
 <?php
-$map = "Durmag.jpg";
+$map = "Durmag.png";
 $pwd = rtrim(get_included_files()[0], "init.php");
 $path = $pwd . substr($map, 0, -3) . "json";
 $content = file_get_contents($path);

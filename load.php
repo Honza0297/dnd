@@ -5,11 +5,13 @@ $map = $post_data->id;
 $pwd = rtrim(get_included_files()[0], "loader.php");
 $path = $pwd . substr($map, 0, -3) . "json";
 $content = file_get_contents($path);
-
+error_log("-----------json data: ");
+error_log($post_data->id);
 if ($content == NULL) 
 {
 	error_log("Map json file not present, creating...");
 	$dummy = fopen($path, "w");
+	$json = json_decode ("{}");
 	$json->name =  $map;
 	$json->unique = 0;
 	$json->canvas = "";
